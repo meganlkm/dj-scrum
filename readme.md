@@ -34,3 +34,11 @@ python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
 ````
+
+## tasty pie error
+
+Edit `$PYTHON_LIB_PATH/site-packages/tastypie/resources.py` (~ line 2200)
+
+Change the decorator of `patch_list()` from `@transaction.commit_on_success()` to `@transaction.atomic()`
+
+See this SO answer [http://stackoverflow.com/a/22511270/2055887](http://stackoverflow.com/a/22511270/2055887)
