@@ -35,7 +35,7 @@ python manage.py createsuperuser
 python manage.py runserver
 ````
 
-## tasty pie error
+## tastypie error
 
 Edit `$PYTHON_LIB_PATH/site-packages/tastypie/resources.py` (~ line 2200)
 
